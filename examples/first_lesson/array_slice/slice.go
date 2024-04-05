@@ -29,6 +29,14 @@ func main() {
 	// SubSlice()
 
 	//shareArr()
+
+	//for i := 0; i < len(s1); i++ {
+	//	fmt.Printf("s1[%d]: %d \n", i, s1[i])
+	//}
+	//
+	//for i, i2 := range s1 {
+	//	fmt.Printf("s1[%d]: %d \n", i, i2)
+	//}
 }
 
 func SubSlice() {
