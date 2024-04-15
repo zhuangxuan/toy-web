@@ -18,16 +18,18 @@ func main() {
 	// 赋值
 	m2["hello"] = "world"
 	// 取值
-	val := m["hello"]
-	println(val)
+	//val := m["hello"]
+	//println(val)
 
-	// 再次取值，使用两个返回值，后面的ok会告诉你map有没有这个key
-	val, ok := m["invalid_key"]
-	if !ok {
-		println("key not found")
-	}
-
+	//// 再次取值，使用两个返回值，后面的ok会告诉你map有没有这个key
+	//val, ok := m["invalid_key"]
+	//if !ok {
+	//	println("key not found")
+	//}
+	//
 	for key, val := range m {
 		fmt.Printf("%s => %s \n", key, val)
 	}
+	// 为什么cap(m)会报错
+	//println(cap(m))
 }

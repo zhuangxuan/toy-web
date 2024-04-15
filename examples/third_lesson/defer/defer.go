@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
+
+	fmt.Println("start")
 	defer func() {
 		fmt.Println("aaa")
 	}()
@@ -14,4 +16,5 @@ func main() {
 	defer func() {
 		fmt.Println("ccc")
 	}()
+	fmt.Println("end")
 }

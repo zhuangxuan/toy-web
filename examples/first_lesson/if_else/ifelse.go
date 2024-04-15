@@ -11,7 +11,7 @@ func main() {
 }
 
 func Young(age int) {
-	if age < 18{
+	if age < 18 {
 		fmt.Println("I am a child!")
 	} else {
 		// else 分支也可以没有
@@ -20,6 +20,14 @@ func Young(age int) {
 }
 
 func IfUsingNewVariable(start int, end int) {
+
+	if weight := end - start; weight > 100 {
+		fmt.Printf("重量太大，不运输： %d\n", weight)
+	} else {
+		// else 分支也可以没有
+		fmt.Printf("重量并不大，运输： %d\n", weight)
+	}
+
 	if distance := end - start; distance > 100 {
 		fmt.Printf("距离太远，不来了： %d\n", distance)
 	} else {

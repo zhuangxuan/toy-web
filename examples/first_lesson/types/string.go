@@ -10,9 +10,10 @@ func main() {
 我还可以换个行
 `)
 
-
 	println(len("你好")) // 输出6
-	println(utf8.RuneCountInString("你好")) // 输出 2
+	//println(len("你好")) 为什么输出6呢？因为一个汉字占3个字节，所以两个汉字就是6个字节
+	println(len("Hello"))                   // 输出5
+	println(utf8.RuneCountInString("你好"))   // 输出 2
 	println(utf8.RuneCountInString("你好ab")) // 输出 4
 
 	// 反正遇到计算字符个数，比如说用户名字多长，博客多长这种字符个数

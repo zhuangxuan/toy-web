@@ -1,10 +1,14 @@
 package main
 
 var aa = "hello"
+
 // var aa = "bbb" 这个包已经有一个 a 了，所以再次声明会导致编译
 func main() {
 	aa := 13 // 虽然包外面已经有一个 aa 了，但是这里从包变成了局部变量
 	println(aa)
+
+	ab := 134
+	println(ab)
 
 	var bb = 15
 	//var bb = 16 // 重复声明，也会导致编译不通过

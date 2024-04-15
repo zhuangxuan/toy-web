@@ -8,13 +8,13 @@ var Global = "全局变量"
 var local = "包变量"
 
 var (
-	First string = "abc"
-	second int32 = 16
+	First  string = "abc"
+	second int32  = 16
 )
 
 func main() {
 	// int 是灰色的，是因为 golang 自己可以做类型推断，它觉得你可以省略
-	var a int = 13
+	var a int = 15
 	println(a)
 
 	// 这里我们省略了类型
@@ -25,13 +25,20 @@ func main() {
 	var c uint = 15
 	println(c)
 
+	// uint 和 int 有什么区别呢？
+	// uint 是无符号整数，int 是有符号整数
+	// 无符号整数的取值范围是 0 到 2^n-1
+	// 有符号整数的取值范围是 -2^(n-1) 到 2^(n-1)-1
+	// 例如 uint8 的取值范围是 0 到 255，int8 的取值范围是 -128 到 127
+	// 为什么要有无符号整数呢？因为有时候我们需要表示一个数的范围，而不需要负数
+	// 例如，我们要表示一个人的年龄，年龄不可能是负数，所以我们可以用 uint8 来表示
+	// 但是，如果我们要表示一个人的身高，身高可能是负数，所以我们要用 int8 来表示
+	// 但是，如果我们要表示一个人的体重，体重不可能是负数，所以我们可以用 uint8 来表示
+
 	// 这一句无法通过编译，因为 golang 是强类型语言，并且不会帮你做任何的转换
-	// println(a == c)
+	//println(a == c)
 
 	// 只声明不赋值，d 是默认值 0，类型不可以省略
 	var d int
 	println(d)
 }
-
-
-

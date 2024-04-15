@@ -6,13 +6,14 @@ import (
 
 var mutex sync.Mutex
 var rwMutex sync.RWMutex
+
 func Mutex() {
 	mutex.Lock()
 	defer mutex.Unlock()
-	// 你的代码
+	// 你的代码2
 }
 
-func RwMutex()  {
+func RwMutex() {
 	// 加读锁
 	rwMutex.RLock()
 	defer rwMutex.RUnlock()
@@ -23,7 +24,7 @@ func RwMutex()  {
 }
 
 // 不可重入例子
-func Failed1()  {
+func Failed1() {
 	mutex.Lock()
 	defer mutex.Unlock()
 
@@ -34,7 +35,7 @@ func Failed1()  {
 }
 
 // 不可升级
-func Failed2()  {
+func Failed2() {
 	rwMutex.RLock()
 	defer rwMutex.RUnlock()
 

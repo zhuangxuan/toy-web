@@ -14,5 +14,6 @@ func main() {
 	val, ok := m.Load("cat")
 	if ok {
 		fmt.Println(len(val.(string)))
+		fmt.Println(val.(string))
 	}
 }

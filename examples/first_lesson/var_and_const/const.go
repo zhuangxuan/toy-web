@@ -6,4 +6,6 @@ const External = "包外可访问"
 func main() {
 	const a = "你好"
 	println(a)
+	println(internal)
+	println(External)
 }
