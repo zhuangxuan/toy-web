@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
 )
 
 func main() {
@@ -33,11 +32,13 @@ func main() {
 			if fileInfo.IsDir() {
 				fmt.Println("fileInfo,是一个目录", fileInfo.Name())
 			} else {
-				if strings.HasSuffix(fileInfo.Name(), ".go") {
-					fmt.Println("fileInfo,是一个文件", fileInfo.Name())
-				} else {
-					fmt.Println("fileInfo,是一个文件ttt", fileInfo.Name())
-				}
+				//if strings.HasSuffix(fileInfo.Name(), ".go") {
+				//	fmt.Println("fileInfo,是一个文件", fileInfo.Name())
+				//} else {
+				//	fmt.Println("fileInfo,是一个文件ttt", fileInfo.Name())
+				//}
+				//找到目录下txt文件中read单词出现的次数
+				fmt.Println("fileInfo,是一个文件", fileInfo.Name())
 			}
 		}
 	}

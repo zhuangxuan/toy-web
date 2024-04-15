@@ -1,4 +1,4 @@
-package main
+package go语法加强
 
 var a *string
 
