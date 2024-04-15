@@ -8,11 +8,6 @@ import (
 
 func main() {
 	// openfile可以打开目录，open不行,返回的不是一个文件指针，而是一个文件描述符
-	//f, err := os.OpenFile("test", os.O_RDONLY, os.ModeDir)
-	//if err != nil {
-	//	panic(err)
-	//}
-	//defer f.Close()
 
 	// 获取用户输入的目录
 	fmt.Println("请输入目录:")
