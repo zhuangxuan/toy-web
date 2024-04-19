@@ -1,25 +1,25 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 func main() {
-	ch := make(chan int)
-	for i := 0; i < 10; i++ {
-		go func(i int) {
-			// 处理数据...
-			result := i
-			ch <- result
-			fmt.Println("Goroutine", i, "finished")
-		}(i)
-	}
-	for i := 0; i < 10; i++ {
-		time.Sleep(1 * time.Second)
-		fmt.Printf("Result: %d\n", <-ch)
-	}
-	for {
+	str := removeDuplicates([]string{"red", "black", "red", "pink", "blue", "pink", "blue"})
+	fmt.Println(str)
+}
 
+// ：写一个函数，就地消除[]string中重复字符串，如：
+// {"red", "black", "red", "pink", "blue", "pink", "blue"}
+// 消除后为：{"red", "black", "pink", "blue"}
+
+func removeDuplicates(strs []string) []string {
+	// 请在这里完成你的代码
+	map1 := make(map[string]int)
+	slice := []string{}
+	for _, v := range strs {
+		map1[v] = map1[v] + 1
 	}
+	for k, _ := range map1 {
+		slice = append(slice, k)
+	}
+	return slice
 }
